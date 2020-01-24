@@ -1,30 +1,43 @@
 <html>
-    <head>
-        <title>
-            toDo
-        </title>
-        <meta charset="utf-8"/>
-        
-        <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> 
-        </script>
-        <script></script>
-            $(document).ready(function(){
-              $("p").click(function(){
-                $(this).wrap('<p>');
-              });
-            });
-        </script>
-    </head>
 
-    <body>
-        <div class="col-md-11">
-            <h1>todos</h1>
-            <p>click on a row to edit or delete</p>
-            <div data-role="content">
-                <ul class="list-group"id="taskListSection" >
-                    <li class="list-group-item active">Todos</li>
+<head>
+    <title>
+        toDo
+    </title>
+    <meta charset="utf-8" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script>
+     
+            $(document).ready(function () {
+                $("p").click(function () {
+                    $(this).wrap('<p>');
+                });
+                });
+            $("#form1").submit(function(){
+                var data=$('#new1').val();
+                $('<li>'+data+'</li>').appendTo('.ul1')
+            })
+    </script>
+</head>
+        
+<body>
+    <div class="col-md-11">
+        <h1>todos</h1>
+        <h2>todos</h2>
+        <p>click on a row to edit or delete</p>
+        <form id="form1">
+            <div >
+                <br />
+                <input type="text" name="todo" id="new1" />
+                <input type="button" class="btn btn-success" value="Submit" id="taskBtn" />
+                <ul id="listspace" class="ul1">
+                    <li>asdfasdf</li>
                 </ul>
             </div>
-        </div>
-    </body>
+        </form>
+        
+    </div>
+</body>
 </html>
