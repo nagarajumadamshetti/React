@@ -10,7 +10,7 @@
         <script></script>
             $(document).ready(function(){
               $("p").click(function(){
-                $(this).wrap('<s>');
+                $(this).wrap('<p>');
               });
             });
         </script>
@@ -20,7 +20,17 @@
         <div class="col-md-11">
             <h1>todos</h1>
             <p>click on a row to edit or delete</p>
-            
+            <div data-role="content">
+                <ul class="list-group"id="taskListSection" >
+                    <li class="list-group-item active">Todos</li>
+                </ul>
+                <br/>
+                <fieldset class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <textarea placeholder="Enter task"
+                    </div>
+                </fieldset>
+            </div>
         </div>
     </body>
 </html>
