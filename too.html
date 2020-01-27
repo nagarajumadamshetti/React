@@ -22,13 +22,14 @@
             </div>
 
     </form>
-    <table  class="table table-bordered data-table">
-        <thead >
+    <table class="table table-bordered data-table">
+        <thead>
             <th style='background-color:olive'>CheckBox</th>
             <th style='background-color: rgb(215, 226, 65);'>ToDo</th>
             <th width="200px" style='background-color:rgb(222, 224, 193)'>Action</th>
-        </thead >
-        <tbody style='background-image: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.imgur.com%2FOvMZBs9.jpg&imgrefurl=https%3A%2F%2Fponyfoo.com%2Farticles%2Fyou-dont-need-a-todo-app&docid=3XUotpjYzx2jBM&tbnid=7zSQdGNpw6TejM%3A&vet=10ahUKEwiR-cy7x6PnAhV38HMBHaiYCvgQMwhRKAEwAQ..i&w=398&h=302&bih=625&biw=1366&q=todo%20images&ved=0ahUKEwiR-cy7x6PnAhV38HMBHaiYCvgQMwhRKAEwAQ&iact=mrc&uact=8");' >
+        </thead>
+        <tbody
+            style='background-image: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.imgur.com%2FOvMZBs9.jpg&imgrefurl=https%3A%2F%2Fponyfoo.com%2Farticles%2Fyou-dont-need-a-todo-app&docid=3XUotpjYzx2jBM&tbnid=7zSQdGNpw6TejM%3A&vet=10ahUKEwiR-cy7x6PnAhV38HMBHaiYCvgQMwhRKAEwAQ..i&w=398&h=302&bih=625&biw=1366&q=todo%20images&ved=0ahUKEwiR-cy7x6PnAhV38HMBHaiYCvgQMwhRKAEwAQ&iact=mrc&uact=8");'>
         </tbody>
     </table>
 
@@ -38,7 +39,7 @@
             $("form").submit(function (e) {
                 e.preventDefault();
                 var name = $("input[name='todo']").val();
-                $(".data-table tbody").prepend("<tr data-name='" + name + "'><td width='10%'><input type='checkbox'  class='checkbox'name='checkbox'</td><td>" + name + "</td><td><button class='btn btn-warning btn-xs btn-edit'>Edit</button><button class='btn btn-danger btn-xs btn-delete'>Delete</button></td></tr>");
+                $(".data-table tbody").prepend("<tr data-name='" + name + "'><td width='10%'><input type='checkbox'  class='checkbox'name='checkbox'</td><td max-width='250px'  overflow-wrap='break-word'>" + name + "</td><td><button class='btn btn-warning btn-xs btn-edit'>Edit</button><button class='btn btn-danger btn-xs btn-delete'>Delete</button></td></tr>");
                 $("input[name='todo']").val('');
             })
 
